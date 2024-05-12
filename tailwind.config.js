@@ -24,5 +24,10 @@ module.exports = {
       // => @media (min-width: 1536px) { ... }
     },
   },
-  plugins: [],
+  plugins: [
+    require("@tailwindcss/forms")({
+      strategy: "base", // only generate global styles
+      strategy: "class", // only generate classes
+    }),
+  ],
 };

@@ -6,19 +6,34 @@
     <title>TailWiShop - a online shop that created with Tailwind</title>
     <link rel="stylesheet" href="./build/tailwind.css" />
   </head>
-  <body class="bg-stone-100 mt-6 mb-0 mx-0">
+  <body class="bg-stone-100 m-0">
     <!-------------------------------------------------------- mobile approach -------------------------------------------->
     <div
-      class="flex justify-between items-center mb-6 md:hidden lg:hidden xl:hidden 2xl:hidden p-4 mt-0 shadow-md shadow-slate-200/50"
+      class="flex justify-between items-center mb-6 md:hidden lg:hidden xl:hidden 2xl:hidden p-4 mt-0 shadow-md shadow-slate-200 bg-white sticky top-0"
     >
       <div class="">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-10 h-10 cursor-pointer"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+          />
+        </svg>
+      </div>
+      <div class="text-slate-800 text-2xl font-bold">
         <img
-          class="w-16 h-14 flex cursor-pointer"
-          src="../assets/image/tailwi-logo.jpg"
+          class="w-24 flex cursor-pointer"
+          src="../assets/image/tailwi-logo.png"
           alt="TailWiShop"
         />
       </div>
-      <div class="text-slate-800 text-2xl font-bold">ساعت هوشمند</div>
       <div
         class="bg-white border-spacing-1 border-2 flex justify-center rounded-md"
       >
@@ -28,7 +43,7 @@
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="currentColor"
-          class="w-7 h-7 stroke-slate-800 m-1 flex cursor-pointer"
+          class="w-10 h-10 stroke-slate-800 m-1 flex cursor-pointer"
         >
           <path
             stroke-linecap="round"
@@ -118,14 +133,102 @@
     </div>
     <!------------------------------------------------------- desktop approach  ------------------------------------------->
     <!-- desktop-header -->
-    <div class="flex items-center p-8 sm:hidden">Desktop Header</div>
+    <nav class="flex px-2 sm:hidden bg-white sticky top-0 z-10 shadow-sm mb-4">
+      <div
+        class="container mx-auto max-w-screen-2xl grid grid-cols-12 items-center justify-between"
+      >
+        <!-- desktop-shop-navbar logo -->
+        <div class="col-span-1">
+          <img
+            src="../assets/image/tailwi-logo.png"
+            class="max-w-20 rounded-md cursor-pointer"
+            alt="Logo"
+          />
+        </div>
+        <!-- desktop-shop-Menu  -->
+        <ul class="flex gap-1 p-2 justify-start items-start col-span-7 mx-4">
+          <li class="">
+            <a
+              href="#"
+              class="block hover:bg-slate-100 py-4 px-3 rounded-md text-base md:text-sm text-center"
+            >
+              خانه
+            </a>
+          </li>
+          <li class=" ">
+            <a
+              href="#"
+              class="block hover:bg-slate-100 py-4 px-3 rounded-md text-base md:text-sm text-center"
+            >
+              لپ تاپ
+            </a>
+          </li>
+          <li class=" ">
+            <a
+              href="#"
+              class="block hover:bg-slate-100 py-4 px-3 rounded-md text-base md:text-sm text-center"
+            >
+              تبلت
+            </a>
+          </li>
+          <li class=" ">
+            <a
+              href="#"
+              class="block hover:bg-slate-100 py-4 px-3 rounded-md text-base md:text-sm text-center"
+            >
+              تلفن همراه
+            </a>
+          </li>
+          <li class=" ">
+            <a
+              href="#"
+              class="block hover:bg-slate-100 py-4 px-2 rounded-md text-base md:text-sm text-center"
+            >
+              ساعت هوشمند
+            </a>
+          </li>
+        </ul>
+        <div
+          class="flex gap-2 bg-stone-100 col-span-4 items-center px-2 rounded-md"
+        >
+          <!-- desktop-shop-search bar -->
+          <svg
+            class="w-7 h-7 p-1 cursor-pointer"
+            viewBox="0 0 28 28"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M13.4167 24.5002C19.5378 24.5002 24.5 19.538 24.5 13.4168C24.5 7.29567 19.5378 2.3335 13.4167 2.3335C7.29552 2.3335 2.33334 7.29567 2.33334 13.4168C2.33334 19.538 7.29552 24.5002 13.4167 24.5002Z"
+              stroke="#222F5D"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M25.6667 25.6668L23.3333 23.3335"
+              stroke="#222F5D"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <input
+            class="bg-stone-100 h-12 w-full focus:outline-0 text-orange-400 text-sm"
+            placeholder="جستجوی  نام محصول، نام برند، نام مدل و..."
+            type="text"
+          />
+        </div>
+      </div>
+    </nav>
     <!-- shop - filter & sort bar -->
-
     <div
       class="grid grid-cols-12 md:grid-rows-[55px_minmax(500px , _1fr)] gap-2"
     >
       <!-- sidebare-section  -->
-      <div class="px-2 col-span-3 row-span-2 sm:hidden md:col-span-3">
+      <div
+        class="px-2 col-span-3 row-span-2 sm:hidden md:col-span-4 max-h-[calc(100vh_-_120px)] overflow-auto sticky top-[80px] right-0 scrollbar scrollbar-track-zinc-100 scrollbar-thumb-slate-200 rounded-s-lg"
+      >
         <!-- categories  -->
         <div class="bg-white pr-4 pl-2 rounded-xl py-4">
           <div>
